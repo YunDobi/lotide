@@ -11,13 +11,12 @@ const eqArrays = function (first,second) {
   for (let i = 0; i < first.length; i++) {
     if (first[i] !== second[i]) {
       console.log(false);
-      return;
+      return false;
     } else if (i === first.length - 1 && first[i] === second[i]) {
       console.log(true);
-      return
+      return true;
     }
   }
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
