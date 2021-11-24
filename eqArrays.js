@@ -7,16 +7,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function (first,second) {
-  //if first array is longer than second.
-  for (let i = 0; i < first.length; i++) {
+  let longerArray = first.length;
+  if (longerArray < second.length) {
+    longerArray = second.length;
+  }
+
+  for (let i = 0; i < longerArray; i++) {
     if (first[i] !== second[i]) {
       console.log(false);
       return false;
-    } else if (i === first.length - 1 && first[i] === second[i]) {
+    } else if (i === longerArray - 1 && first[i] === second[i]) {
       console.log(true);
       return true;
     }
   }
 };
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
