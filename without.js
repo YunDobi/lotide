@@ -30,3 +30,18 @@ const assertArraysEqual = function(firstArray, secondArray) {
     console.log(`🛑🛑🛑 Assertion Failed: [${firstArray}] !== [${secondArray}]`);
   }
 };
+
+const without = function(source, itemToRemove) {
+  let result = [...source];
+  for (let i = 0; i < itemToRemove.length; i++) {
+    if (result.includes(itemToRemove[i])) {
+      for (let j = 0; j < result.length; j++) {
+        if (result[j] === itemToRemove[i]) {
+          result.splice(j,1);
+        }
+      }
+    }
+  }
+  console.log(result);
+  return result;
+};
