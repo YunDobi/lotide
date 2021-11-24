@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function (first,second) {
+const eqArrays = function(first,second) {
   let longerArray = first.length;
   if (longerArray < second.length) {
     longerArray = second.length;
@@ -22,3 +22,13 @@ const eqArrays = function (first,second) {
     }
   }
 };
+
+const assertArrayEqual = function(firstArray, secondArray) {
+  if (eqArrays(firstArray, secondArray)) {
+    console.log(`✅✅✅ Assertion Passed: [${firstArray}] === [${secondArray}]`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: [${firstArray}] !== [${secondArray}]`);
+  }
+};
+
+assertArrayEqual([1,2,3], [1,2,3]);
