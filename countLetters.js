@@ -18,4 +18,3 @@ const countLetters = function (strings) {
   }
   console.log(result);
 };
-countLetters("lighthouse in the house")
