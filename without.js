@@ -42,6 +42,12 @@ const without = function(source, itemToRemove) {
       }
     }
   }
-  console.log(result);
   return result;
 };
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+console.log(words)
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+
