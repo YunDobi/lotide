@@ -1,5 +1,5 @@
 {
-  "name": "@yun/lotide",
+  "name": "@yuncheol/lotide",
   "version": "1.0.0",
   "description": "the lighthouse lab learning resource. some of the functions.",
   "main": "assertArraysEqual.js",
