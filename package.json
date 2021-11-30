@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@yun/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "the lighthouse lab learning resource. some of the functions.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/YunDobi/lotide.git"
   },
-  "author": "",
+  "author": "yuncheol lee <lyc1353@gmail.com> (https://github.com/YunDobi/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YunDobi/lotide/issues"

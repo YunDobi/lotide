@@ -1,26 +1,6 @@
-const eqArrays = function(first,second) {
-  let longerArray = first.length;
-  if (longerArray < second.length) {
-    longerArray = second.length;
-  }
-  for (let i = 0; i < longerArray; i++) {
-    if (first[i] !== second[i]) {
-      console.log(false);
-      return false;
-    } else if (i === longerArray - 1 && first[i] === second[i]) {
-      console.log(true);
-      return true;
-    }
-  }
-};
+const eqArrays = require("./eqArrays")
 
-const assertArraysEqual = function(firstArray, secondArray) {
-  if (eqArrays(firstArray, secondArray)) {
-    console.log(`✅✅✅ Assertion Passed: [${firstArray}] === [${secondArray}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${firstArray}] !== [${secondArray}]`);
-  }
-};
+const assertArraysEqual = require("./assertArraysEqual")
 
 
 const letterPositions = function(sentence) {
