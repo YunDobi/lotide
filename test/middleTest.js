@@ -1,4 +1,9 @@
+const assert = require("chai").assert
 const middle = require("../middle");
 const assertArraysEqual = require("../assertArraysEqual")
 
-console.log(assertArraysEqual(middle([1,2,3]),[2]))
+describe ("#middle", () => {
+  it ("return the middle number which is 2", () => {
+    assert.equal((assertArraysEqual(middle([1,2,3]), [2])),"✅✅✅ Assertion Passed: [2] === [2]")
+  })
+})
