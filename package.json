@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/YunDobi/lotide.git"
   },
-  "author": "yuncheol lee <lyc1353@gmail.com> (https://github.com/YunDobi/)",
+  "author": "yuncheol lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YunDobi/lotide/issues"
@@ -22,8 +22,6 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
+
