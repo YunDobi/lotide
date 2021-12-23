@@ -1,4 +1,4 @@
-const eqArrays = require("./eqArrays")
+const eqArrays = require("./eqArrays");
 
 const eqObjects = function(object1, object2) {
   let longerArray = object1;
@@ -12,30 +12,31 @@ const eqObjects = function(object1, object2) {
     for (const shortkey of Object.keys(shortArray)) {
       let longValue = longerArray[longkey];
       let shortValue = shortArray[shortkey];
+      if (typeof(longerArray[longkey]) === 'object') {
+        eqObjects(longerArray[longkey], shortArray[shortkey]);
+      }
 
       if (!Object.keys(longerArray).includes(shortkey)) {//keys are diffrent
-        console.log(false);
         return false;
       } else if (longkey === shortkey) { //valuse are diffrent
         if (Array.isArray(longValue) || Array.isArray(shortValue)) {
           if (eqArrays(longValue,shortValue) === false) {
-            console.log(false);
             return false;
           }
         } else if (longValue !== shortValue) {
-          console.log(false);
           return false;
         }
       }
     }
   }
-  console.log(true);
   return true;
 };
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// eqObjects(cd, dc); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// eqObjects(cd, cd2); // => false
+eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) 
+eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
