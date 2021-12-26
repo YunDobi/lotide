@@ -7,7 +7,6 @@ const eqObjects = function(object1, object2) {
     longerArray = object2;
     shortArray = object1;
   }
-
   for (const longkey of Object.keys(longerArray)) {
     for (const shortkey of Object.keys(shortArray)) {
       let longValue = longerArray[longkey];
